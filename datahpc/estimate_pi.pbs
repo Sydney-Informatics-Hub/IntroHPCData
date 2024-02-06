@@ -1,18 +1,10 @@
 #! /bin/bash
-
 #PBS -P Training
 #PBS -N test_pi_multi
 #PBS -l select=1:ncpus=4:mem=4gb
 #PBS -l walltime=0:10:00
 #PBS -q defaultQ
 
-
 module load python/3.7.2
-
 cd $PBS_O_WORKDIR
-
-
-
-#Running python
-
 python computepi_fire.py 1000 2000 3000

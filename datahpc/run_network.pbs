@@ -6,18 +6,14 @@
 #PBS -l walltime=0:40:00
 #PBS -q defaultQ
 
+# Load R module
 module load R/4.1.1
 
-#change directory into where qsub was called 
-
+# Change directory into where qsub was called
 cd $PBS_O_WORKDIR
 
-#using renv environment already created
+# Using renv environment already created
 export R_LIBS_USER=$HOME/R/library
 
-#source R environment from extenal lockfile
-
+#Execute R file
 Rscript network.R
-
-
-
