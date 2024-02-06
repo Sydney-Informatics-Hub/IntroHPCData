@@ -1,12 +1,12 @@
 # Demonstrates installing packages via interactive session to a location you have write access to.
 # This enables run_stuff.pbs
 
-# Type the below and notice that when the interactive queue starts 
+# Type the below and notice that when the interactive queue starts
 # it changes your directory which can be rechanged.
 
 # On Artmis Terminal:
 
-# qsub -I -P Training -l select=1:ncpus=16:mem=16gb -l walltime=00:30:00
+# qsub -I -P Training -l select=1:ncpus=4:mem=4gb -l walltime=00:30:00
 # module load R/4.3.2
 # R
 
@@ -19,4 +19,4 @@ require(BiocManager)
 BiocManager::install("methylKit",lib = "/project/Training/km5/libs")
 
 # Save workspace image? [y/n/c]: y
-# exit 
+# exit
