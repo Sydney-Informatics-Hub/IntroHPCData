@@ -6,22 +6,16 @@
 #PBS -l walltime=0:10:00
 #PBS -q defaultQ
 
-
+# Load required modules
 module load matlab/R2018a
 
-
-#change directory into where qsub was called 
-
+# Change directory into where qsub was called 
 cd $PBS_O_WORKDIR
 
-
-#call matlab script
-
+# Call matlab script
 matlab -nosplash -nodisplay -r 'airline_analysis; exit'
 
-
-
 # More background info on matlab and linux
-#https://au.mathworks.com/help/matlab/ref/matlablinux.html
+# https://au.mathworks.com/help/matlab/ref/matlablinux.html
 
 
